@@ -1,6 +1,9 @@
-export function get(request) {
+const isMasterBean = __.newBean('com.enonic.lib.cluster.IsMasterBean');
+
+
+export function get() {
     return {
-        body: '<html><head></head><body><h1>Hello world!</h1></body></html>',
+        body: `<html><head></head><body><h1>${__.toNativeObject(isMasterBean.isMaster())}</h1></body></html>`,
         contentType: 'text/html; charset=utf-8'
     };
 }
