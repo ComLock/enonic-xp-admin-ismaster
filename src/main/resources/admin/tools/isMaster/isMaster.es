@@ -1,4 +1,4 @@
-import {serviceUrl} from 'lib/xp/portal';
+import {serviceUrl} from '/lib/xp/portal';
 import isMaster from '/lib/enonic/cluster/isMaster.es';
 
 export function get() {
